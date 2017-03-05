@@ -1,4 +1,4 @@
-﻿ObjectId package for Go language
+﻿ObjectId package for Go
 ====
 This package provides build a unique object identifier for the high concurrent environment.
 
@@ -20,7 +20,7 @@ Installation
 ====
 Use the `go` command:
 ```go
-go get github.com/zhengchun/go-objectid
+go get github.com/zhengchun/objectid
 ```
 
 Example
@@ -30,7 +30,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zhengchun/go-objectid"
+	"github.com/zhengchun/objectid"
 )
 
 func main() {

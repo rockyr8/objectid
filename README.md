@@ -1,10 +1,8 @@
-﻿ObjectId package for Go
+﻿objectId [![GoDoc](https://godoc.org/github.com/zhengchun/objectid?status.svg)](https://godoc.org/github.com/zhengchun/objectid)
 ====
-This package provides build a unique object identifier for the high concurrent environment.
+objectId package provides build a unique object identifier and are stored as 12-bytes.
 
-The `ObjectId` can instead of GUID,and are stored as 12-bytes.
-
-Reference from : [ObjectId of Mongodb](http://docs.mongodb.org/manual/reference/object-id/)
+Reference : [ObjectId of Mongodb](http://docs.mongodb.org/manual/reference/object-id/)
 
 > ObjectId is a 12-byte BSON type, constructed using:
 
@@ -16,14 +14,11 @@ Reference from : [ObjectId of Mongodb](http://docs.mongodb.org/manual/reference/
 
 > a 3-byte counter, starting with a random value.
 
-Installation
+installation
 ====
-Use the `go` command:
-```go
-go get github.com/zhengchun/objectid
-```
+> go get github.com/zhengchun/objectid
 
-Example
+example
 ====
 ```go
 package main
@@ -36,8 +31,7 @@ import (
 func main() {
 	objid := objectid.New()
 	fmt.Printf("ObjectId: %s\n", objid)
-	objid = objectid.Parse("55cc60946f29581a606930aa")
+	objid, _ = objectid.Parse(objid.String())
 	fmt.Printf("%d-%d-%d-%d\n", objid.Timestamp(), objid.Machine(), objid.Pid(), objid.Increment())
 }
-
 ```
